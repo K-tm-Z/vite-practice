@@ -4,17 +4,15 @@ import giphy from '../assets/giphy.gif'
 const Navbar = () => {
   return (
     <nav className="navbar">
+      <div className="nav-left">
         <img src={giphy} alt="Logo" className="logo"/>
-        <h1 className="title">My Vite App</h1>
-        <div className="buttons">
-            <button class="draw meet">Home</button>
-            <button class="draw meet">About</button>
-            <button class="draw meet">Contact</button>
-        </div>
-        <section class="buttons">
-            <button className="draw">Draw</button>
-            <button className="meet">Draw Meet</button>
-        </section>
+        <span className="sitename">My Vite App</span>
+      </div>
+      <ul className="nav-right">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
   )
 }
