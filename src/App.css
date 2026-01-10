@@ -5,28 +5,84 @@
   text-align: center;
 }
 
-.section {
+.section-wrapper {
   width: 100%;
+}
+
+.section {
+  max-width: 90%;
+  display: flex;
   padding: 10px 25px 20px;
-  box-sizing: border-box;
+  margin: 50px auto;
+  border-radius: 20px;
+  background: linear-gradient(to right, #080808, #e52e7163 50%, #e52e71da 95%);
 }
 
-.box {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  height: 150px;
-  padding: 16px;
-  border-radius: 12px;
-  background-color: #e0858559;
-  color:#000000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.section .box {
+  flex-grow: 0;
+  height: 300px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  font-weight: 500;
+  padding: 0 30px;
+  position: relative;
+  width: 60%;
+  background-color: transparent;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.section .box:first-child {
+  min-width: 40%;
+  margin-right: 0;
+}
+
+.meme {
+  height: auto;
+  width: 60%;
+  z-index: 3;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 30px;
+  border-radius: 20px;
+}
+
+.section.section--reverse .box {
+  width: 40%;
+}
+
+.section.section--reverse .box:first-child {
+  width: 60%;
+}
+
+.section.section--reverse .box .meme {
+  left: auto;
+  right: 30px;
+}
+
+@media (max-width: 430px) {
+  .section {
+    flex-direction: column;
+    margin: 20px auto;
+    border-color: #e52e71da;
+    background: black;
+  }
+
+  .section .box,
+  .section.section--reverse .box {
+    width: 90%;
+    height: auto;
+  }
+
+  .section .box .meme,
+  .section.section--reverse .box .meme {
+    position: relative;
+    width: 100%;
+    height: auto;
+    transform: none;
+    top: auto;
+    left: auto;
+    right: auto;
+    margin-bottom: 15px;
+  }
 }
