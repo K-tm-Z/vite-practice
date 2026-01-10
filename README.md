@@ -1,3 +1,8 @@
+Jan 9, 2026
+- Realized that I've been doing things very randomly (resulted from learning with AI and random youtube tutorials) so I decided to dedicate this next update just to learn and practice/ playing around with CSS flexbox.
+- Utilized flexbox layout
+- Mimicked banners' behaviours, tried to create the content list.
+
 Jan 8, 2026
 - Used contrasting colors for accessibilities for now.
 - Revamped the Navbar:
